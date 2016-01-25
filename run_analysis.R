@@ -2,6 +2,11 @@ library( dplyr)
 
 getwd()
 
+
+
+# Skip this section if uncompressed raw data is in working directory exactly as
+#	it "unzips"
+
 fileUrl = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 	# The URL where the file is located
 
@@ -12,6 +17,11 @@ download.file( fileUrl, filePath, method = "curl")
 
 unzip( filePath,  exdir = "./")
 	# uncompress raw data file
+	
+	
+	
+	
+	
 
 # load relevant data files into R data frames
 
