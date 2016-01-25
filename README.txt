@@ -27,6 +27,4 @@ Tidy_Data_2.csv - Second required tidy data set saved as comma separted value fi
 
 tidy.data.2.Rdata - Second required tidy data set saved as R object.
 
-README.md - Markdown file for this README document. This file should display on GitHub repository.
-
 README.txt - txt version of README file.
