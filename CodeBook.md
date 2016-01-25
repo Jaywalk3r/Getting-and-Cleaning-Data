@@ -274,7 +274,7 @@ colnames( X.subset) = features.subset
 
 ####Combine subject identifier, activity identifier and variable values into single data frame.####  
 
-We still build a data frame that has columns for the subject, activity, and each measurement for each observation. We also group the observations by subject and activity and save the resulting data frame as a comma separated value file. We also save the data frame as an .Rdata file.
+We still build a data frame that has columns for the subject, activity, and each measurement for each observation. We also group the observations by subject and activity and save the resulting data frame in three formats: a .csv file, a .txt file, and a .Rdata file.
 
 
 ```r
@@ -284,6 +284,9 @@ tidy.data = group_by( dataset, Subject, Activity)
 
 write.csv( tidy.data, "Tidy_Data_1.csv", row.names = FALSE)
 	# save tidy.data as a .csv file in the working directory
+	
+write.table( tidy.data, "Tidy_Data_1.txt", row.names = FALSE)
+	# # save tidy.data as a .txt file in the working directory
 
 save( tidy.data, file = "tidy.data.1.Rdata")
 	# save tidy.data as an .Rdata file in working directory
@@ -295,7 +298,7 @@ save( tidy.data, file = "tidy.data.1.Rdata")
 
 We create a second tidy data set with the average of each variable with the average for each subject and activity combination. We have 30 subjects and 6 activities, so our resulting data frame will have 180 rows. The *summarize_each* function in the *dplyr* package allows us to create the desired data frame very easily.
 
-As before, we save our new data frame as both a comma separated value file and a .Rdata file.
+As before, we save our new data frame in three file formats.
 
 
 ```r
@@ -303,6 +306,9 @@ tidy.data.2 = summarize_each( tidy.data, "mean")
 
 write.csv( tidy.data.2, "Tidy_Data_2.csv", row.names = FALSE)
 	# save tidy.data.2 as a .csv file in the working directory
+
+write.table( tidy.data.2, "Tidy_Data_2.txt", row.names = FALSE)
+	# # save tidy.data.2 as a .txt file in the working directory
 
 save( tidy.data.2, file = "tidy.data.2.Rdata")
 	# save tidy.data.2 as a .Rdata file in the working directory

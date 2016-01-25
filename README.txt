@@ -21,10 +21,14 @@ run_analysis.R - R script used for downloading and processing raw data to produc
 
 Tidy_Data_1.csv - first required tidy data set in comma separated value format.
 
+Tidy_Data_1.txt - first required tidy data set in text format.
+
 tidy.data.1.Rdata - first required tidy data set saved as R object.
 
-Tidy_Data_2.csv - Second required tidy data set saved as comma separted value file.
+Tidy_Data_2.csv - Second required tidy data set saved as comma separated value file.
+
+Tidy_Data_2.txt - Second required tidy data set saved in text format.
 
 tidy.data.2.Rdata - Second required tidy data set saved as R object.
 
-README.txt - txt version of README file.
+README.txt - this README file.

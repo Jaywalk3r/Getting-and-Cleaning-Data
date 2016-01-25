@@ -153,6 +153,9 @@ tidy.data = group_by( dataset, Subject, Activity)
 
 write.csv( tidy.data, "Tidy_Data_1.csv", row.names = FALSE)
 	# save tidy.data as a .csv file in the working directory
+	
+write.table( tidy.data, "Tidy_Data_1.txt", row.names = FALSE)
+	# # save tidy.data as a .txt file in the working directory
 
 save( tidy.data, file = "tidy.data.1.Rdata")
 	# save tidy.data as an .Rdata file in working directory
@@ -168,6 +171,9 @@ tidy.data.2 = summarize_each( tidy.data, "mean")
 
 write.csv( tidy.data.2, "Tidy_Data_2.csv", row.names = FALSE)
 	# save tidy.data.2 as a .csv file in the working directory
+
+write.table( tidy.data.2, "Tidy_Data_2.txt", row.names = FALSE)
+	# # save tidy.data.2 as a .txt file in the working directory
 
 save( tidy.data.2, file = "tidy.data.2.Rdata")
 	# save tidy.data.2 as a .Rdata file in the working directory
